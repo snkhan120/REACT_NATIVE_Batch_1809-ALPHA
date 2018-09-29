@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>VARIABLE	NAMES: LEGAL & ILLEGAL</title>
+</head>
+
+<body>
+	
+	<h1>VARIABLE	NAMES: LEGAL & ILLEGAL</h1>
+	
+	
+	<script>
+		
+		//document.write('VARIABLE	NAMES: LEGAL & ILLEGAL.<br>');	
+		
+		
+		//1 & 2
+		var no1 = 9, no2 = 3;
+		var result = no1 + no2;
+		alert('Sum of '+no1+ ' and '+no2+ ' is '+ result);
+		
+		var result = no1 - no2;
+		alert('Result of subtracting '+no1+ ' from '+no2+ ' is '+ result);
+		
+		var result = no1*no2;
+		alert('Result of multiplying '+no1+ ' and '+no2+ ' is '+ result);
+		
+		var result = no1/no2;
+		alert('Result of dividing '+no1+ ' by '+no2+ ' is '+ result);
+		
+		var result = no1%no2;
+		alert('Remainder of dividing '+no1+ ' by '+no2+ ' is '+ result);
+		
+		//3
+		
+		var var1;
+		document.write('Variable declare: '+var1);	
+		document.write('<br>');	
+		var1 = 3;
+		document.write('Variable Init: '+var1);	
+		document.write('<br>');	
+		var1 = 3+1;
+		document.write('Variable Inc++: '+var1);	
+		document.write('<br>');	
+		
+		var1 = var1+7;
+		document.write('Variable sum with 7: '+var1);	
+		document.write('<br>');	
+		
+		var1 = var1-1;
+		document.write('Variable Inc--: '+var1);	
+		document.write('<br>');	
+		
+		var1 = var1%3;
+		document.write('The remainder is '+var1);	
+		document.write('<br>');	
+		
+		//4
+		var ticketPrice = 600;
+		var buyingTicketQty = 5;
+		var totalCost = ticketPrice * buyingTicketQty;
+		
+		document.write('Total cost to buy '+buyingTicketQty+ ' tickets to a movie is '+totalCost+ ' PKR' );	
+		document.write('<br>');	
+		
+		//5
+		document.write('<br>');	
+		document.write('Multiplication table of 4');
+		document.write('<br><br>');	
+		var table = 4, result = 0;
+		for(var i=1; i<11; i++){
+			result = i * table;
+			document.write(table+' x '+i+ ' = '+result);
+			document.write('<br>');	
+		}		
+		document.write('<br>');	
+		
+		//6
+		
+		//8
+		var totalMarks = 1200;
+		var marksObtained = 900;
+		var percentage = marksObtained/totalMarks*100;
+		
+		document.write('<h1>Marks Sheet<h1>');
+		document.write('<h4>Total Marks : '+totalMarks+'<h4>');	
+		document.write('<h4>Marks obtained : '+marksObtained+' <h4>');	
+		document.write('<h4>Percentage : '+percentage+' %<h4>');	
+		document.write('<br>');	
+
+	</script>
+	
+</body>
+
+</html>
