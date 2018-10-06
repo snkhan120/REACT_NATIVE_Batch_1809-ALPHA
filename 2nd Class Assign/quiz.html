@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Multiple Choice Questions | JavaScript</title>
+
+	<style>
+	   *{
+		 font-family:calibri;
+		 font-size:50px;
+	   }
+   </style>	
+	
+	<!--JavaScript code -->
+	<script>
+		/*
+		Ahsan Khan
+		APPTRON REACT NATIVE Batch 1809-ALPHA 
+		Dear Student kindly develop a javascript MCQS QUIZ program.
+		for hint please find code in file and use your own another logic to develop Quiz program .. 
+		Note: submit it on sunday morning.
+		*/
+	
+		// function prompt
+		function questionPrompt(question, correctAns) {
+			var result = prompt(question);
+			if(result == correctAns) {
+				return 1;
+			} else {
+				return 0;
+			}
+		}
+		
+		alert("Answer the following questions "); 
+		
+		var count, a1,a2,a3,a4,a5,a6,a7,a8,a9,a10;
+		count = 0;
+		
+		// Q:1
+		count += questionPrompt("1. What does CSS stand for?\n\na. Colorful Style Sheets\nb. Cascading Style Sheets\nc. Computer Style Sheets\nd. Creative Style Sheets\n", "b");	
+		
+		// Q:2
+		count += questionPrompt('2. What is the correct HTML for referring to an external style sheet?\n\na. <style src="mystyle.css">\nb. <link rel="stylesheet" type="text/css" href="mystyle.css">\nc. <stylesheet>mystyle.css</stylesheet>', "b");
+		
+		// Q:3
+		count += questionPrompt('3. Inside which HTML element do we put the JavaScript?\n\na. <script>\nb. <javascript>\nc. <js>\nd. <scripting>', "a");
+		
+		// Q:4
+		count += questionPrompt('4. The external JavaScript file must contain the <script> tag.\n\na. True\nb. False', "a");
+		
+		// Q:5
+		count += questionPrompt('5. What is the correct HTML element for inserting a line break?\n\na. <break>\nb. <br>\n c. <lb>', "b");
+		
+		// Q:6
+		count += questionPrompt('6. What is the correct HTML for adding a background color?\n\na. <body style="background-color:yellow;">\nb. <body bg="yellow">\nc. <background>yellow</background>', "a");
+		
+		// Q:7
+		count += questionPrompt('7. What is the correct HTML for creating a hyperlink?\n\na. <a name="http://www.w3schools.com">W3Schools.com</a>\nb. <a>http://www.w3schools.com</a>\nc. <a href="http://www.w3schools.com">W3Schools</a>\nd. <a url="http://www.w3schools.com">W3Schools.com</a>', "c");
+		
+		// Q:8
+		count += questionPrompt('8. How do you create a function in JavaScript?\n\na. function:myFunction()\nb. function myFunction()\nc. function = myFunction()', "b");
+			
+	</script>
+
+</head>
+
+<body>
+	<h2><center>Questions Result</center></h2>
+	<p>
+	<script>
+		    document.write("<br/> <center> <i> <p> Total marks you obtained :\t" + count + "</p> </i> </center>");
+			document.write("<br/> <center> <i> <p> Total marks of Questions :\t8</p> </i> </center>");
+
+	</script>
+	</p>
+</body>
+
+</html>
