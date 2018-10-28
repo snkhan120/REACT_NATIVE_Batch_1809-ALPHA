@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Calculator</title>
+</head>
+
+<body>
+
+
+
+	<h1 id="timer">Calculator</h1>
+
+	<table>
+		<tr>
+			<td colspan="4"><input type="number" id="userInput" name=""></td>
+		</tr>
+		<tr>
+			<td><button onclick="pressBtn(this);" value="1">1</button></td>
+			<td><button onclick="pressBtn(this);" value="2">2</button></td>
+			<td><button onclick="pressBtn(this);" value="3">3</button></td>
+			<td><button onclick="sum(this);">+</button></td>	
+		</tr>
+		<tr>
+			<td><button onclick="pressBtn(this);" value="4">4</button></td>
+			<td><button onclick="pressBtn(this);" value="5">5</button></td>
+			<td><button onclick="pressBtn(this);" value="6">6</button></td>
+			<td><button onclick="sub();">-</button></td>		
+		</tr>
+		<tr>
+			<td><button onclick="pressBtn(this);" value="7">7</button></td>
+			<td><button onclick="pressBtn(this);" value="8">8</button></td>
+			<td><button onclick="pressBtn(this);" value="9">9</button></td>
+			<td><button onclick="Multiply();">*</button></td>	
+		</tr>
+		<tr>
+			<td colspan="2"><button style="width: 100%" onclick="pressBtn();" value="0">0</button></td>
+			<td><button onclick="divide();">/</button></td>
+			<td><button onclick="equal();">=</button></td>
+		</tr>
+	</table>
+	
+	<script>
+
+		var firstNumber = 0;
+		var secNumber = 0;
+
+		var numbers = [];
+
+		function pressBtn(number) {
+			document.getElementById("userInput").value = number.value;
+			numbers.push(number.value);
+			console.log(numbers)
+		}
+
+		function sum(number) {
+			document.getElementById("userInput").value += "+" +number.value;
+			secNumber = document.getElementById("userInput").value
+			res = firstNumber + secNumber;
+			//document.getElementById("userInput").value = res
+		}
+	
+	</script>	
+</body>
+
+
+</html>
