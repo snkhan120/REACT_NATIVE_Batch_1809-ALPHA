@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Stop Watch</title>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+
+<body>
+
+<header>
+  <h2>Stop Watch</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1 id="timer">00:00:00</h1>
+		<button onclick="startButton();">Start</button>
+		<button onclick="stopTimer()">Stop</button>
+		<button onclick="clearTimer()">Clear</button>
+  </article>
+</section>
+
+<footer>
+  <p>M. Ahsan Khan</p>
+</footer>
+
+	
+
+<script>
+	var timer = document.getElementById("timer");
+	var millisecond = 0, second = 0, minutes = 0, stop;
+
+	//
+	function startButton () {
+
+		millisecond++;
+
+		if(millisecond >= 60) {
+			second++;
+			millisecond = 0;
+		} else if (second >= 10) {
+			minutes++;
+			second = 0;
+		}
+
+		var milliStr = millisecond<10 ? "0"+millisecond : millisecond;
+		var secStr = second<10 ? "0"+second : second;
+		var minStr = minutes<10 ? "0"+minutes : minutes
+
+		timer.innerHTML = `${minStr}:${secStr}:${milliStr}`;
+		startTimer();
+
+	}
+
+	//
+	function startTimer() {
+		stop = setTimeout(() => {
+			startButton();
+		}, 20)	
+	}
+
+	//
+	function clearTimer() {
+		clearTimeout(stop);
+		timer.innerHTML = "00:00:00";
+		millisecond = 0;
+		second = 0;
+		minutes = 0;
+	}
+
+	//
+	function stopTimer() {
+		clearTimeout(stop);
+	}
+
+
+ </script>	
+</body>
+</html>
